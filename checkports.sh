@@ -38,11 +38,12 @@ get_IP() {
 
 
 check_distro
-if [ $(echo $distro_name | grep -i ubuntu1) ]; then
+if [ $(echo $distro_name | grep -i ubuntu) ]; then
 	install_pack_ubuntu
-elif [ `echo $distro_name | grep -i centos` ]; then
+elif [ $(echo $distro_name | grep -i centos) ]; then
 	install_pack_centos
 else
 	echo -e "\033[0;32mLinux distribution name is NOT CENTOS or UBUNTU ... \033[0m"
 fi
-#get_IP
+
+get_IP

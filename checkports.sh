@@ -6,20 +6,20 @@ check_distro() {
 install_pack_ubuntu() {
 	dpkg -l nmap 1> /dev/null
         if [[ "$?" != "0" ]]; then
-                echo -e "\033[0;33mNetcat is NOT installed ... \033[0m"
+                echo -e "\033[0;33mnmap is NOT installed ... \033[0m"
                 sudo apt update
                 sudo apt -y install nmap
         else
-                echo -e "\033[0;32mNetcat Is Installed ... \033[0m"
+                echo -e "\033[0;32mnmap Is Installed ... \033[0m"
         fi
 }
 install_pack_centos() {
         rpm -qa | grep -i nmap 1> /dev/null
         if [[ "$?" != "0" ]]; then
-                echo -e "\033[0;31mNetcat is NOT installed ... \033[0m"
+                echo -e "\033[0;31mnmap is NOT installed ... \033[0m"
                 sudo yum -y install nmap
         else
-                echo -e "\033[0;32mNetcat Is Installed ... \033[0m"
+                echo -e "\033[0;32mnmap Is Installed ... \033[0m"
         fi
 }
 
